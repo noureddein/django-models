@@ -1,0 +1,18 @@
+{% extends '_base.html' %} 
+{% block title %}Snack Details | {{ snack.name }} {% endblock title %}
+{% block content %}
+<table border="1">
+    <tbody>
+    <thead>
+        <th>Name</th>	
+        <th>Description</th>
+        <th>Purchaser</th>
+    </thead>			
+    <tr>
+        <th>{{ snack.name }}</th>	
+        <th>{{ snack.description }}</th>
+        <th>{{ snack.purchaser }}</th>
+    </tr> 
+    </tbody>   
+  </table>
+{% endblock %}

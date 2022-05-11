@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+{% block title %}Snack List {% endblock %} 
+{% block content %} 
+<table border="1">
+    <tbody>
+    <thead>
+        <th>Name</th>	
+        <th>Description</th>
+        <th>Purchaser</th>
+    </thead>			
+    {% for snack in snacks_list %}
+            <tr>
+                <th>{{ snack.id }}</th>
+                <th><a href="{% url 'snack_detail' pk=snack.pk %}">{{ snack.name }}</a></th>	
+                <th>{{ snack.purchaser }}</th>
+            </tr> 
+            {% endfor %} 
+        </tbody>   
+    </table>
+{% endblock content %}
